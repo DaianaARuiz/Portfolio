@@ -1,11 +1,12 @@
-
+const d=document,
+      w=window;
 
 /*===== SHOW NAVBAR  =====*/ 
 const showNavbar = (toggleId, navId, bodyId, headerId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId),
-    bodypd = document.getElementById(bodyId),
-    headerpd = document.getElementById(headerId)
+    const toggle = d.getElementById(toggleId),
+    nav = d.getElementById(navId),
+    bodypd = d.getElementById(bodyId),
+    headerpd = d.getElementById(headerId)
     console.log("toggle");
     console.log(toggle);
     // Validate that all variables exist
@@ -26,7 +27,7 @@ const showNavbar = (toggleId, navId, bodyId, headerId) =>{
 showNavbar('header-toggle','nav-bar','body-pd','header')
 
 /*===== LINK ACTIVE  =====*/ 
-const linkColor = document.querySelectorAll('.nav__link')
+const linkColor = d.querySelectorAll('.nav__link')
 
 function colorLink(){
     if(linkColor){
@@ -35,3 +36,6 @@ function colorLink(){
     }
 }
 linkColor.forEach(l=> l.addEventListener('click', colorLink))
+
+/*===== SCROLL BTN  =====*/
+

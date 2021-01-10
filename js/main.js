@@ -1,3 +1,7 @@
+import {scrollTopButton, removeImgCv, ScrollAnimation} from "./functions.js";
+
+
+
 /*===== PARTICLES JS =====*/ 
 particlesJS(
     {
@@ -150,29 +154,54 @@ linkColor.forEach(l=> l.addEventListener('click', colorLink))
 
 /*===== BTN MENU  =====*/ 
 const $divBtnMenu= document.querySelector(".header__toggle"),
-      $btnMenu= document.querySelector("#header-toggle");
+      $btnMenu= document.querySelector("#header-toggle"),
       $container=document.querySelector(".container");
-  
-  $btnMenu.addEventListener('click',()=>{
-    if($btnMenu.classList.contains("bx-x")==true){
-      $divBtnMenu.style.paddingLeft="130px";
-      $container.style.paddingLeft="250px";
+
+const responsive= (pBtn1,pCont1,pBtn2,pCont2)=>{
+    if (window.innerWidth < 768){
+      console.log(" La pantalla tiene menos d 768");
+      $divBtnMenu.style.paddingLeft= pBtn1;
+      $container.style.paddingLeft= pCont1;
     }else{
-      $divBtnMenu.style.paddingLeft="20px";
-      $container.style.paddingLeft="140px";
+      console.log(" La pantalla tiene al menos 768");
+      $divBtnMenu.style.paddingLeft= pBtn2;
+      $container.style.paddingLeft= pCont2;
     }
+}
+
+  responsive("10px","10px","0px","100px");
+  $btnMenu.addEventListener('click',()=>{
+      if($btnMenu.classList.contains("bx-x")==true){  
+         responsive("70px","80px","130px","235px");
+      }else{
+        responsive("10px","10px","0px","100px");
+      }
   });
+
   
 /*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
-  origin: 'top',
-  distance: '80px',
-  duration: 2000,
-  reset: true
-});
+// const sr = ScrollReveal({
+//   origin: 'top',
+//   distance: '80px',
+//   duration: 2000,
+//   reset: true
+// });
 
-/*SCROLL HOME*/
-sr.reveal('.start__title',{}); 
-sr.reveal('.start__descripcion',{delay: 200}); 
-// sr.reveal('.home__img',{delay: 400}); 
-sr.reveal('.start__social-media',{ interval: 200}); 
+// /*SCROLL HOME*/
+// sr.reveal('.start__title',{}); 
+// sr.reveal('.start__descripcion',{delay: 200}); 
+// // sr.reveal('.home__img',{delay: 400}); 
+// sr.reveal('.start__social-media',{ interval: 200}); 
+
+
+
+
+
+const d = document,
+      w = window;
+
+d.addEventListener("DOMContentLoaded",(e)=>{
+  scrollTopButton(".scroll-to-btn");
+  removeImgCv(".header__img");
+  ScrollAnimation(".animated");
+})

@@ -6,30 +6,26 @@
     <title>Daiana Ruiz</title>
     <!-- ===== BOX ICONS ===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="style.css">
-     
-    
 </head>
 <body id="body-pd">
-    <div id="particles-js"></div>
+
     <header class="header" id="header">
         <div class="header__toggle">
             <i class='bx bx-menu' id="header-toggle"></i>
         </div>
 
-        <div class="header__img">
+        <div class="header__img hidden">
             <img src="img/fotoCV.jpg" alt="">
         </div>
     </header>
-
     <div class="navbar" id="nav-bar">
         <nav class="nav">
             <div>
                 <a href="#" class="nav__logo">
                     <i class='bx bx-layer nav__logo-icon'></i>
-                    <span class="nav__logo-name">Daiana Ruiz <br>Web Developer</span>
+                    <span class="nav__logo-name">Daiana Ruiz<br>Web Developer</span>
                 </a>
 
                 <div class="nav__list">
@@ -39,14 +35,8 @@
                     </a>
 
                     <a href="#skills" class="nav__link">
-                        <!-- <i class='bx bx-user nav__icon' ></i>  -->
                         <i class="far fa-user nav__icon"></i>
                         <span class="nav__name">Sobre mi</span>
-                    </a>
-                    
-                    <a href="#" class="nav__link">
-                        <i class='bx bx-message-square-detail nav__icon' ></i>
-                        <span class="nav__name">Formación</span>
                     </a>
 
                     <a href="#" class="nav__link">
@@ -54,7 +44,7 @@
                         <span class="nav__name">Habilidades</span>
                     </a>
 
-                    <a href="#" class="nav__link">
+                    <a href="#projects" class="nav__link">
                         <i class='bx bx-folder nav__icon' ></i>
                         <span class="nav__name">Proyectos</span>
                     </a>
@@ -68,10 +58,12 @@
         </nav>
     </div>
     <div class="container">
+        <div id="particles-js"></div>
+        <!-- Welcome Section -->
         <section id="start">
 
             <div class="start__img">
-                <img src="img/fotoCV.jpg" alt="">
+                <img src="img/fotoCV.jpg" alt="FotoCV">
             </div>
             <div class="start__title">
                 <p>Daiana Ruiz</p>
@@ -81,19 +73,38 @@
             <a href="#skills" class="btn-link">Conoceme</a>
 
             <div class="start__social-media">
-                <i class="fab fa-github"></i>
-                <i class="fab fa-linkedin-in"></i>
+                <a href="https://github.com/DaianaARuiz" target="__blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/daiana-ruiz-0197bb1ab/"  target="__blank"><i class="fab fa-linkedin-in"></i></a>
             </div> 
         </section>
+         <!-- End Welcome Section -->
+        
+        <!-- About Section -->
+        <section id="about" class="animated">
+            <div class="about__left">
+                <div class="about-img">
+                    <img src="img/about.png" alt="img">
+                </div>
+            </div>
+            <div class="about__right">
+                <p class="about__right__title"> Sobre<span> mi</span></p>
+                <h2>Desarrolladora Web Fullstack</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, velit alias eius non illum beatae atque repellat ratione qui veritatis repudiandae adipisci maiores. At inventore necessitatibus deserunt exercitationem cumque earum omnis ipsum rem accusantium quis, quas quia, accusamus provident suscipit magni! Expedita sint ad dolore, commodi labore nihil velit earum ducimus nulla quae nostrum fugit aut, deserunt reprehenderit libero enim!</p>
+                <a href="docs/CV-RuizDaiana.pdf" class="about__btn" download="">Descargar CV </a>
+            </div>
+        </section>
 
-        <section class="about"></section>
+        <!-- End About Section -->
         <section class="education"></section>
       
+        <!-- Skills Section -->
         <section class="skills" id="skills">
-            <h2 class="skills__title">Habilidades técnicas</h2>
-            <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
-            <div class="skills__container bd-grid">          
-                <div>
+            <div class="skills__title">
+                <p class="title">Conocimientos técnicos</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
+            </div>
+            <div class="skills_content">
+                <div class="skills__container bd-grid">          
                     <div class="skills__data">
                         <div class="skills__names">
                             <i class='bx bxl-html5 skills__icon'></i>
@@ -113,7 +124,7 @@
                             <span class="skills__name">CSS3</span>
                         </div>
                         <div class="skills__bar skills__css">
-                                
+                       
                         </div>
                         <div>
                             <span class="skills__percentage">85%</span>
@@ -135,93 +146,184 @@
 
                     <div class="skills__data">
                         <div class="skills__names">
-                            <i class='bx bxs-paint skills__icon'></i>
-                            <span class="skills__name">UX/UI</span>
+                            <i class="fab fa-php skills__icon"></i>
+                            <span class="skills__name">PHP</span>
                         </div>
                         <div class="skills__bar skills__ux">
-                                
+                               
+                        </div>
+                        <div>
+                            <span class="skills__percentage">50%</span>
+                        </div>        
+                    </div>
+
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class="fas fa-database skills__icon"></i>
+                            <span class="skills__name">MySql</span>
+                        </div>
+                        <div class="skills__bar skills__ux">
+                               
+                        </div>
+                        <div>
+                            <span class="skills__percentage">50%</span>
+                        </div>        
+                    </div>
+
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class="fab fa-cuttlefish skills__icon"></i>
+                            <span class="skills__name">C</span>
+                        </div>
+                        <div class="skills__bar skills__ux">
+                               
                         </div>
                         <div>
                             <span class="skills__percentage">85%</span>
+                        </div>        
+                    </div>
+ 
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class="fab fa-git-alt skills__icon"></i>
+                            <span class="skills__name">GIT</span>
+                        </div>
+                        <div class="skills__bar skills__ux">
+                               
+                        </div>
+                        <div>
+                            <span class="skills__percentage">85%</span>
+                        </div>        
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class="fas fa-cube skills__icon"></i>
+                            <span class="skills__name">POO</span>
+                        </div>
+                        <div class="skills__bar skills__ux">
+                               
+                        </div>
+                        <div>
+                            <span class="skills__percentage">85%</span>
+                        </div>        
+                    </div>
+                </div> 
+                <div class="skills__img">
+                    <img src="img/skills03.svg" alt="">
+                </div>           
+            </div>
+        </section>
+        <!-- End skills Section -->
+
+        <!-- Projects Section -->
+        <section class="projects">
+            <div class="projects__title">
+                <p class="title">Mis proyectos</p>
+                <p>Estos son alguno de los proyectos que he realizado ¡Estoy trabajando en muchos más que estarán disponibles próximamente!</p>
+            </div>
+            <div class="projects__content">
+
+                <div class="projects__box">
+                    <div class="projects__box_img">
+                        <img src="img/work03.png" alt="">
+                    </div>
+                    <div class="projects__box_content">
+                        <p>Koya Web</p>
+                        <p>Página web de mi emprendimiento como programadora freelance. Realizada con PHP, CSS y JavaScript. </p>
+                        <div class="projects__box_content_links">
+                            <a href="https://github.com/DaianaARuiz/KoyaWebSite" target="__blank">Ver código<i class="fab fa-github"></i></a>
+                            <a href="https://koyaweb.com.ar/" target="__blank">Ver online<i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
-                    
-                <div>              
-                    <img src="img/work03.svg" alt="" class="skills__img">
+    
+                <div class="projects__box">
+                    <div class="projects__box_img">
+                        <img src="img/work01.png" alt="" >
+                    </div>
+                    <div class="projects__box_content">
+                        <p>Agencia de diseño</p>
+                        <p>Página web de una agencia de diseño, realizada unicamente con CSS y HTML.</p>
+                        <div class="projects__box_content_links">
+                            <a href="https://github.com/DaianaARuiz/Landing" target="__blank">Ver código<i class="fab fa-github"></i></a>
+                            <a href="http://www.ejemplolandingpage01.koyaweb.com.ar/" target="__blank">Ver online<i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
                 </div>
+        
+                <div class="projects__box">
+                    <div class="projects__box_img">
+                        <img src="img/work02.png" alt="">
+                    </div>
+                    <div class="projects__box_content">
+                        <p>RetratoSol</p>
+                        <p>Página web realizada para un emprendimiento de retratos por encargo. Hecha con HTML, CSS y PHP para el formulario. </p>
+                        <div class="projects__box_content_links">
+                            <a href="https://github.com/DaianaARuiz/Landing_Retratos-Sol" target="__blank">Ver código<i class="fab fa-github"></i></a>
+                            <a href="http://retratosol.koyaweb.com.ar/" target="__blank">Ver online<i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>       
+               
+                <div class="projects__box">
+                    <div class="projects__box_img">
+                    </div>
+                    <div class="projects__box_content">
+                        <p>Próximamente</p>
+                        <p></p>
+                    </div>
+                </div>  
             </div>
         </section>
+        <!-- End rojects Section -->
 
+        <!-- Contact Section -->
         <section class="contact" id="contact">
             <div class="contact__title">
-                <p>Contacto</p>
+                <p class="title">Contacto</p>
                 <p>¡Espero tu propuesta!</p>
             </div>
-            <!-- <aside id="contact_info">
-                <div>
-                    <i class="fab fa-github"></i>
-                    <p>@DaianaARuiz</p>
-                </div>
-                <div>
-                    <i class="fab fa-linkedin-in"></i>
-                    <p></p>
-                </div>
-                
-            </aside> -->
             <div class="contact__form">
                 <form action="" class="form" id="form">
-                    <input class="input"  type="text" name="" id="" placeholder="Nombre">
-                    <input class="input"  type="email" name="" id="" placeholder="Email">
-                    <textarea  class="input" name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <input class="input"  type="submit" value="Enviar">
+                    <input class="input"  type="text" name="nombre" id="" placeholder="Nombre">
+                    <input class="input"  type="email" name="email" id="" placeholder="Email">
+                    <textarea  class="input" name="msj" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <input class="input" type="submit" value="Enviar">
                 </form>
             </div>
-           
         </section>
+        <!-- End contact Section -->
+        <button class="scroll-to-btn hidden">&#11014;</button>
 
-       
+        <footer>
+            <div class="footer-info">
+                <div class="footer-info__contact">
+                    <p>Info de contacto</p>
+                    <ul>
+                        <li><i class="fas fa-envelope icon"></i> Mail: daianayelenruiz@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt icon"></i>Ubicación: Buenos Aires, Argentina</li>
+                        <li><i class="fas fa-phone-alt icon"></i>Celular: 1126434069 </li>
+                    </ul>
+                </div>
+                <div class="footer-info__links">
+                    <p>Links</p>
+                    <ul>
+                        <li><i class="fas fa-external-link-alt icon"></i>Mi sitio web: <a href="https://www.koyaweb.com.ar/index.php"  target="__blank">koyaweb.com.ar</a> </li>
+                        <li><i class="fab fa-github icon"></i>Mi github: <a href="https://github.com/DaianaARuiz" target="__blank">@DaianaARuiz</a></li>
+                        <li><i class="fab fa-linkedin-in icon"></i>Linkedin: <a href="https://github.com/DaianaARuiz" target="__blank">@DaianaARuiz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer-signature">
+                <span>Página realizada con ❤️</span><span>por Daiana Ayelén Ruiz</span>
+            </p>
+        </footer>
     </div>
-
-    <footer>
-        <div class="footer01">
-            <div class="footer__menu"> 
-                <ul>
-                    <li>Inicio</li>
-                    <li>Sobre mi</li>
-                    <li>Formación</li>
-                    <li>Habilidades</li>
-                    <li>Proyectos</li>
-                    <li>Contacto</li>
-                </ul>
-            </div>
-            <div class="footer__contact">
-                <p>Info de contacto</p>
-                <ul>
-                    <li>Mail: daianayelenruiz@gmail.com</li>
-                    <li>Ubicación: Buenos Aires, Argentina</li>
-                </ul>
-            </div>
-            <div class="footer__links">
-                <p>Links</p>
-                <ul>
-                    <li>Mi sitio web: <a href="https://www.koyaweb.com.ar/index.php"  target="__blank">koyaweb.com.ar</a> </li>
-                    <li>Mi github: <a href="https://github.com/DaianaARuiz" target="__blank">@DaianaARuiz</a></li>
-                    <li>Linkedin: <a href="https://github.com/DaianaARuiz" target="__blank">@DaianaARuiz</a></li>
-                </ul>
-            </div>
-        </div>
-        <p>
-            <span>Página realizada con ♥</span><span>por Daiana Ayelen Ruiz</span>
-        </p>
-    </footer>
-   
-    
      <!--===== ICONS =====-->
      <script src="https://kit.fontawesome.com/2d78e61024.js" crossorigin="anonymous"></script>
     <!--===== PARTICLES JS =====-->
      <script src="js/particles.min.js"></script>
     <!--===== MAIN JS =====-->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
 </body>
 </html>
