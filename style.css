@@ -73,7 +73,7 @@ html{
   cursor:pointer;
   outline:0;
   border:0;
-  transition:all 0.3s ease-out;
+  transition:all 0.5s ease-out;
 }
 .scroll-to-btn:hover{
   background-color: var(--black-color);
@@ -268,6 +268,11 @@ html{
 .start__social-media a{
   text-decoration: none;
   color:var(--first-color-light);
+  transition: .7s ease;
+}
+
+.start__social-media a:hover{
+  color:var(--first-color);
 }
 
 .start__social-media a i{
@@ -290,7 +295,8 @@ html{
 }
 
 .btn-link:hover {
-    border: 1px solid var(--first-color-light);
+    border: 1px solid var(--first-color);
+    color:var(--first-color);
     animation: none;
 }
 
@@ -315,12 +321,6 @@ html{
   justify-content: center;
   align-items: center;
 }
-
-/* .about__left{
-  /width: 40%; 
-   width: 250px;
-  height: 360px;  
-} */
 
 .about-img{
   width: 250px;
@@ -382,7 +382,7 @@ html{
     border-style: solid;
     border-color: var(--first-color);
     border-image: initial;
-    transition: background-color 0.3s ease 0s, color;
+    transition: .7s ease;
 }
 
 .about__btn:hover{
@@ -699,7 +699,7 @@ input[type="submit"]{
   width: 120px;
   text-align: center;
   padding: 14px 0;
-  transition:all 0.3s ease-out;
+  transition:all 0.7s ease-out;
 }
 
 input[type="submit"]:hover{
@@ -753,7 +753,7 @@ footer{
 
 .footer-info__links ul li .icon, .footer-info__contact ul li .icon{ 
   padding-right: 8px;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color:var(--first-color);
 }
 
@@ -764,7 +764,6 @@ footer{
   text-align:center;
   align-items:center;
   font-weight: 900;
-  /* font-size: 1.125rem */
 }
 
 
@@ -847,19 +846,23 @@ footer{
   .about__left{
     width: 100%;
     display:flex;
-    justify-content: flex-end;
-    margin-right:100px;
+    justify-content:center;
   }
 
   /* footer */
   .footer-info{
     flex-direction: column;
+    justify-content:center;
+    align-content:center;
+    text-align:center;
     margin: 10px auto;
   }
   .footer-info__contact{
     padding-bottom:35px;
   }
-
+  .footer-info ul{
+    text-align:left;
+  }
 }
 @media screen and (max-width: 543px){
   .footer-signature{
