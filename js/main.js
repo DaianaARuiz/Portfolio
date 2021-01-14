@@ -1,5 +1,4 @@
-import {scrollTopButton, removeImgCv, ScrollAnimation} from "./functions.js";
-
+import {scrollTopButton, removeImgCv, ScrollAnimation,showNavbar,responsiveBtnMenu,linkActive} from "./functions.js";
 
 
 /*===== PARTICLES JS =====*/ 
@@ -117,66 +116,10 @@ particlesJS(
 );
 
 
-/*===== SHOW NAVBAR  =====*/ 
-const showNavbar = (toggleId, navId, bodyId, headerId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId),
-    bodypd = document.getElementById(bodyId),
-    headerpd = document.getElementById(headerId)
 
-    // Validate that all variables exist
-    if(toggle && nav && bodypd && headerpd){
-        toggle.addEventListener('click', ()=>{
-            // show navbar
-            nav.classList.toggle('show')
-            // change icon
-            toggle.classList.toggle('bx-x')
-            // add padding to body
-            bodypd.classList.toggle('body-pd')
-            // add padding to header
-            headerpd.classList.toggle('body-pd')
-        })
-    }
-}
 
-showNavbar('header-toggle','nav-bar','body-pd','header')
 
-/*===== LINK ACTIVE  =====*/ 
-const linkColor = document.querySelectorAll('.nav__link')
 
-function colorLink(){
-    if(linkColor){
-        linkColor.forEach(l=> l.classList.remove('active'))
-        this.classList.add('active')
-    }
-}
-linkColor.forEach(l=> l.addEventListener('click', colorLink))
-
-/*===== BTN MENU  =====*/ 
-const $divBtnMenu= document.querySelector(".header__toggle"),
-      $btnMenu= document.querySelector("#header-toggle"),
-      $container=document.querySelector(".container");
-
-const responsive= (pBtn1,pCont1,pBtn2,pCont2)=>{
-    if (window.innerWidth < 768){
-      console.log(" La pantalla tiene menos d 768");
-      $divBtnMenu.style.paddingLeft= pBtn1;
-      $container.style.paddingLeft= pCont1;
-    }else{
-      console.log(" La pantalla tiene al menos 768");
-      $divBtnMenu.style.paddingLeft= pBtn2;
-      $container.style.paddingLeft= pCont2;
-    }
-}
-
-  responsive("10px","10px","0px","100px");
-  $btnMenu.addEventListener('click',()=>{
-      if($btnMenu.classList.contains("bx-x")==true){  
-         responsive("70px","80px","130px","235px");
-      }else{
-        responsive("10px","10px","0px","100px");
-      }
-  });
 
   
 /*===== SCROLL REVEAL ANIMATION =====*/
@@ -196,12 +139,27 @@ const responsive= (pBtn1,pCont1,pBtn2,pCont2)=>{
 
 
 
-
 const d = document,
       w = window;
 
 d.addEventListener("DOMContentLoaded",(e)=>{
+  showNavbar('header-toggle','nav-bar','body-pd','header');
+  responsiveBtnMenu();
   scrollTopButton(".scroll-to-btn");
   removeImgCv(".header__img");
   ScrollAnimation(".animated");
+  // linkActive();
+  linkActive();
 })
+
+
+// const linkColor = d.querySelectorAll('.nav__link');
+
+// function colorLink(){
+//     if(linkColor){
+//         linkColor.forEach(l=> l.classList.remove('active'))
+//         this.classList.add('active')
+//         console.log(this);
+//     }
+// }
+// linkColor.forEach(l=> l.addEventListener('click', colorLink))
