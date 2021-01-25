@@ -1,5 +1,16 @@
 import {scrollTopButton, removeImgCv, ScrollAnimation,showNavbar,responsiveBtnMenu,linkActive} from "./functions.js";
 
+const d = document,
+      w = window;
+
+d.addEventListener("DOMContentLoaded",(e)=>{
+  showNavbar('header-toggle','nav-bar','body-pd','header');
+  responsiveBtnMenu();
+  scrollTopButton(".scroll-to-btn");
+  removeImgCv(".header__img");
+  ScrollAnimation(".animated");
+  linkActive();
+})
 
 /*===== PARTICLES JS =====*/ 
 particlesJS(
@@ -114,52 +125,3 @@ particlesJS(
         "retina_detect": true
       }
 );
-
-
-
-
-
-
-
-  
-/*===== SCROLL REVEAL ANIMATION =====*/
-// const sr = ScrollReveal({
-//   origin: 'top',
-//   distance: '80px',
-//   duration: 2000,
-//   reset: true
-// });
-
-// /*SCROLL HOME*/
-// sr.reveal('.start__title',{}); 
-// sr.reveal('.start__descripcion',{delay: 200}); 
-// // sr.reveal('.home__img',{delay: 400}); 
-// sr.reveal('.start__social-media',{ interval: 200}); 
-
-
-
-
-const d = document,
-      w = window;
-
-d.addEventListener("DOMContentLoaded",(e)=>{
-  showNavbar('header-toggle','nav-bar','body-pd','header');
-  responsiveBtnMenu();
-  scrollTopButton(".scroll-to-btn");
-  removeImgCv(".header__img");
-  ScrollAnimation(".animated");
-  // linkActive();
-  linkActive();
-})
-
-
-// const linkColor = d.querySelectorAll('.nav__link');
-
-// function colorLink(){
-//     if(linkColor){
-//         linkColor.forEach(l=> l.classList.remove('active'))
-//         this.classList.add('active')
-//         console.log(this);
-//     }
-// }
-// linkColor.forEach(l=> l.addEventListener('click', colorLink))
